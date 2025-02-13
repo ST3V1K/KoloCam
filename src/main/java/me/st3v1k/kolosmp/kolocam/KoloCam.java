@@ -26,7 +26,7 @@ public class KoloCam implements ModInitializer {
     public static final String MOD_ID = "kolocam";
 
     private static final RegistryKey<Item> CAMERA_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, "camera"));
-    public static final CameraItem CAMERA_ITEM = new CameraItem(new Item.Settings().registryKey(CAMERA_KEY).maxCount(1));
+    public static final CameraItem CAMERA_ITEM = new CameraItem(new Item.Settings().registryKey(CAMERA_KEY).maxCount(1).maxDamage(3));
 
     @Override
     public void onInitialize() {
@@ -49,17 +49,8 @@ public class KoloCam implements ModInitializer {
             player.getEntityWorld().putMapState(mapIdComponent, mapState);
             stack.set(DataComponentTypes.MAP_ID, mapIdComponent);
 
-            if (!player.isCreative()) {
-                int slot = player.getInventory().getSlotWithStack((new ItemStack(Items.MAP)));
-                if (slot != -1) {
-                    player.getInventory().getStack(slot).decrement(1);
-                    ItemEntity itemEntity = new ItemEntity(player.getServerWorld(), player.getPos().x, player.getPos().y, player.getPos().z, stack);
-                    player.getServerWorld().spawnEntity(itemEntity);
-                }
-            } else {
-                ItemEntity itemEntity = new ItemEntity(player.getServerWorld(), player.getPos().x, player.getPos().y, player.getPos().z, stack);
-                player.getServerWorld().spawnEntity(itemEntity);
-            }
+            ItemEntity itemEntity = new ItemEntity(player.getServerWorld(), player.getPos().x, player.getPos().y, player.getPos().z, stack);
+            player.getServerWorld().spawnEntity(itemEntity);
         });
     }
 }
