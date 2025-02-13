@@ -3,7 +3,7 @@ loaderVersion = "[4,)"
 license="MIT"
 
 [[mods]]
-modId="polaroidcamera"
+modId="kolocam"
 version="1.8.1"
 displayName="Polaroid Camera"
 authors="CyborgPigeon"
@@ -12,28 +12,28 @@ description='''A mod for Minecraft that adds a camera that takes pictures and pu
 [properties]
 "connector:placeholder" = true
 
-[[dependencies.polaroidcamera]]
+[[dependencies.kolocam]]
 modId = "connector"
 type = "required"
 versionRange = "*"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.polaroidcamera]]
+[[dependencies.kolocam]]
 modId = "neoforge"
 type = "required"
 versionRange = "*"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.polaroidcamera]]
+[[dependencies.kolocam]]
 modId = "minecraft"
 type = "required"
 versionRange = "[${minecraft_version},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.polaroidcamera]]
+[[dependencies.kolocam]]
 modId = "fabric_api"
 type = "required"
 versionRange = "[${fabric_version},)"
