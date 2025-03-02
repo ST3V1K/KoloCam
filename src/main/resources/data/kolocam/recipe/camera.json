@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OTO",
+    "OGO",
+    "OBO"
+  ],
+  "key": {
+    "O": "minecraft:obsidian",
+    "T": "minecraft:tinted_glass",
+    "G": "minecraft:glow_ink_sac",
+    "B": "minecraft:black_dye"
+  },
+  "result": {
+    "id": "kolocam:camera"
+  }
+}

@@ -9,9 +9,6 @@
   "icon": "assets/kolocam/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "me.st3v1k.kolosmp.kolocam.client.KoloCamClient"
-    ],
     "main": [
       "me.st3v1k.kolosmp.kolocam.KoloCam"
     ]
